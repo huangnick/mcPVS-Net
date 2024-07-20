@@ -9,7 +9,7 @@ The mcPVS-Net was trained based on the nnU-Net framework. We annotated PVS on mu
 
 
 # Usage
-The mcPVS-Net can be easily used in the nnU-Net environment. Please check https://github.com/MIC-DKFZ/nnUNet for detailed instructions. The trained model could be downloaded from: [to be uploaded].
+The mcPVS-Net can be easily used in the nnU-Net environment. Please check https://github.com/MIC-DKFZ/nnUNet for detailed instructions. The trained model can be downloaded from: https://1drv.ms/f/s!Ak736dkukrs2iPQubqYgSvBRH6QmZQ?e=99Pt6b.
 Several preprocessing steps are required, including brain extraction, bias field correction, and intensity normalization.
 
 # Reference
