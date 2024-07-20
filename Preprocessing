@@ -1,0 +1,4 @@
+# Preprocessing steps are performed using these tools:
+  Brain extraction: MRtool, https://www.nitrc.org/projects/mrtool/. This tool is based on Matlab and SPM12.
+  Biasfield Correction: ANTS, https://stnava.github.io/ANTs/.
+  Intensity-normalization: https://github.com/jcreinhold/intensity-normalization?tab=readme-ov-file.
