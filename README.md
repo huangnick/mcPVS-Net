@@ -15,4 +15,4 @@ We uploaded one T1w demo image and the processed images. You should get the same
 
 # Reference
 Please cite the following paper if you use this model:
-Huang et al. Development and validation of a perivascular space segmentation method in multi-center datasets. Under review.
+Peiyu Huang, Lingyun Liu, Yao Zhang, Siyan Zhong, Peng Liu, Hui Hong, Shuyue Wang, Linyun Xie, Miao Lin, Yeerfan Jiaerken, Xiao Luo, Kaicheng Li, Qingze Zeng, Lei Cui, Jixuan Li, Yanxing Chen, Ruiting Zhang. Development and validation of a perivascular space segmentation method in multi-center datasets. Neuroimage. 2024.
