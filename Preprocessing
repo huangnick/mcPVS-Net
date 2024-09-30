@@ -2,3 +2,35 @@
   Brain extraction: MRtool, https://www.nitrc.org/projects/mrtool/. This tool is based on Matlab and SPM12.
   Biasfield Correction: ANTS, https://stnava.github.io/ANTs/.
   Intensity-normalization: https://github.com/jcreinhold/intensity-normalization?tab=readme-ov-file.
+
+# Here are some demo Matlab code:
+
+subname='T1.nii';
+subdir='./';
+brain_mask='T1_brainmask.nii';
+brain_masked='T1_masked.nii';
+brain_biascorrected='T1_masked_bc.nii';
+brain_normalized='T1_normalized.nii';
+
+%% Please change the paths to yours
+n4_bias_commmand='Path_to_N4BiasFieldCorrection'; 
+normalize_command='Path_to_fcm-normalize'; 
+
+%% go into subject directory
+cd(subdir)
+
+%% brain_bet
+matlabbatch={};
+matlabbatch{1}.spm.tools.MRI.MRTool_preproc.MRTool_brain.res_dir = {subdir};
+matlabbatch{1}.spm.tools.MRI.MRTool_preproc.MRTool_brain.t1w = {subname};
+spm_jobman('run',matlabbatch);
+
+%% biasfieldcorrection
+command1=[n4_bias_commmand ' -i' ' ' brain_masked ' -s 2 -b [100] -o' ' ' brain_biascorrected];
+system(command1);
+
+%% normalization
+command2=[normalize_command ' ' brain_biascorrected ' -o '  brain_normalized ' -m ' brain_mask ];
+system(command2);
+
+
