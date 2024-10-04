@@ -3,7 +3,7 @@
   Biasfield Correction: ANTS, https://stnava.github.io/ANTs/.
   Intensity-normalization: https://github.com/jcreinhold/intensity-normalization?tab=readme-ov-file.
 
-# Here are some demo Matlab code:
+# Here are some demo Matlab codes:
 
 subname='T1.nii';
 subdir='./';
@@ -19,7 +19,7 @@ normalize_command='Path_to_fcm-normalize';
 %% go into subject directory
 cd(subdir)
 
-%% brain_bet
+%% brain_extraction
 matlabbatch={};
 matlabbatch{1}.spm.tools.MRI.MRTool_preproc.MRTool_brain.res_dir = {subdir};
 matlabbatch{1}.spm.tools.MRI.MRTool_preproc.MRTool_brain.t1w = {subname};
